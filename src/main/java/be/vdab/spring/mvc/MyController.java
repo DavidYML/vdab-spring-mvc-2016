@@ -5,9 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-import java.util.List;
 
 @Controller
 public class MyController {
@@ -32,13 +31,13 @@ public class MyController {
     }
 
     @RequestMapping("/ex")
-//    @ResponseBody moet weg als je inhoud wilt weergeven en niet letterlijke string overtypen
     public String ex(Model model) {
-
-        List<Film> films = fr.findAll();
-        model.addAttribute("filmList", films);
-        System.out.println(films);
+        model.addAttribute("filmList", fr.findAll());
         return "films";
+    }
 
+    @RequestMapping("/addfilm")
+    public String addFilm() {
+        return "addfilm";
     }
 }
