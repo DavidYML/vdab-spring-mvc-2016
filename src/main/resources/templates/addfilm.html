@@ -24,18 +24,19 @@
 
     <body>
 
-
+    <div class="page-header text-center">
         <h1>Add a new film</h1>
 
-
+</div>
+    <div class="text-center">
         <form method="post" th:action="@{/processfilm}">
             <div>
-                <label for="title">Title</label>
-                <input name="title" type="text"/>
+                <label  for="title">Title</label>
+                <input  name="title" type="text"/>
             </div>
             <div>
                 <label for="description">Description</label>
-                <input name="description" type="text"/>
+                <input  name="description" type="text"/>
             </div>
             <div>
                 <label for="releaseYear">Release year</label>
@@ -45,8 +46,12 @@
                 <label for="length">Length</label>
                 <input name="length" type="text"/>
             </div>
+
             <input type="submit" value="Add new film"/>
+
         </form>
+
+        </div>
 
     </body>
     <script th:src="@{/js/jquery-2.0.2.min.js}"></script>
