@@ -30,7 +30,12 @@ public class MyController {
         return "foo";
     }
 
-    @RequestMapping("/ex")
+    @RequestMapping("/index")
+    String index() {
+        return "index";
+    }
+
+    @RequestMapping("/filmList")
     public String ex(Model model) {
         model.addAttribute("filmList", fr.findAll());
         return "films";
@@ -40,4 +45,10 @@ public class MyController {
     public String addFilm() {
         return "addfilm";
     }
+    @RequestMapping(value = "/processfilm", method = RequestMethod.POST)
+    public String processForm(Film film) {
+        fr.save(film);
+        return "redirect:/filmList";
+    }
+
 }

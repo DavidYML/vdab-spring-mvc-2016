@@ -2,13 +2,33 @@
 
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
     <head>
-        <meta charset="UTF-8"/>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <title>Movie Database</title>
+        <link th:href="@{/css/bootstrap-3.0.3.min.css}" rel="stylesheet"/>
+        <link th:href="@{/css/styles.css}" rel="stylesheet"/>
     </head>
-    <body>
-        <h1>Add a new film</h1>
-        <p>On this page we add a new film</p>
 
-        <form method="post" action="/processfilm">
+    <div class="navbar navbar-default">
+        <div class="container">
+            <a class="navbar-brand" href="http://localhost:8080/filmList"><span class="rd-blue">Movie List</span></a>
+            <a class="navbar-brand" href="http://localhost:8080/filmList"></a>
+            <ul class="nav navbar-nav">
+                <li><a th:href="@{/index}">Home</a></li>
+                <li><a th:href="@{/addfilm}">Add Movie</a></li>
+
+            </ul>
+        </div>
+    </div>
+
+    <body>
+
+
+        <h1>Add a new film</h1>
+
+
+        <form method="post" th:action="@{/processfilm}">
             <div>
                 <label for="title">Title</label>
                 <input name="title" type="text"/>
@@ -29,4 +49,6 @@
         </form>
 
     </body>
+    <script th:src="@{/js/jquery-2.0.2.min.js}"></script>
+    <script th:src="@{/js/bootstrap-3.0.3.min.js}"></script>
 </html>
