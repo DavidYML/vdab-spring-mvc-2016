@@ -50,7 +50,7 @@
                     <td th:text="${f.length}"></td>
                     <td th:text="${f.releaseYear}"></td>
                     <td></td>
-                    <td><a href="delete.html?id=1" class="btn btn-xs btn-danger" >Delete</a> </td>
+                    <td><a th:href="${#mvc.url('MC#remove').arg(0, f.id).build()}" class="btn btn-xs btn-danger" >Delete</a> </td>
 
 
 
