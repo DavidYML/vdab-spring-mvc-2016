@@ -21,7 +21,7 @@
 }
 @keyframes davidanim {
   0% {transform: rotate(360deg) scale(0.4) ; }
-  100% {transform: rotate(360deg) scale(2.0);}
+  100% {transform: rotate(360deg) scale(1.0);}
 }
 
 @keyframes davidanim1 {
@@ -36,25 +36,41 @@
   100% {transform: rotate(360deg) scale(1.0);}
 }
 
-#home {
+#home
+{
 
   animation-name: davidanim;
   animation-duration: 1s;
   animation-direction: alternate;
-  animation-iteration-count: 6;
+  animation-iteration-count: infinite;
 }
 
 #rol {
   animation-name: davidanim1;
   animation-duration: 1s;
-  animation-delay: 2s;
   /*animation-direction: alternate;*/
-  animation-iteration-count: 10;
+  animation-iteration-count: 3;
 
 }
 
 #list {
   animation-name: davidanim2;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 2;
+}
+#title
+  {
+
+  animation-name: davidanim2;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: 3;
+}
+#title1
+{
+
+  animation-name: davidanim2;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: 3;
 }
