@@ -1,12 +1,10 @@
 package be.vdab.spring.mvc;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Film {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -14,10 +12,20 @@ public class Film {
     private String title;
     private String description;
     private String releaseYear;
+    @Lob
+    private String picUrl;
 
     private int length;
 
     public Film() {
+    }
+
+    public String getPicUrl() {
+        return picUrl;
+    }
+
+    public void setPicUrl(String picUrl) {
+        this.picUrl = picUrl;
     }
 
     public Integer getId() {

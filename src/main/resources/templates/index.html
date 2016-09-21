@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:transform="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <meta charset="utf-8"/>
@@ -7,8 +7,16 @@
     <title>Movie Database</title>
     <link th:href="@{/css/bootstrap-3.0.3.min.css}" rel="stylesheet"/>
     <link th:href="@{/css/styles.css}" rel="stylesheet"/>
+
+    <style >
+        div:hover {
+            transform: rotate(360deg);
+        }
+
+    </style>
 </head>
 <body>
+
 <div class="navbar navbar-default">
     <div class="container">
         <a class="navbar-brand" href="http://localhost:8080/filmList"><span class="rd-blue">Movie List</span></a>
@@ -27,8 +35,15 @@
     <div class="page-header text-center">
         <h1><span class="rd-blue">Movie Database</span></h1>
         <p class="lead">Build your own movie database </p>
+        <p>                                     </p>
 
-    <img src="http://cdn8.openculture.com/wp-content/uploads/2011/02/free-movies-online.jpg" height="300" width="350"/>
+
+    <img id="home" src="http://cdn8.openculture.com/wp-content/uploads/2011/02/free-movies-online.jpg"
+
+          height="200" width="250"/>
+
+        <p></p>
+
 
         <a href="https://twitter.com/share" class="twitter-share-button"
            data-text="This site is awesome" data-hashtags="Java,Project">Tweet</a>
